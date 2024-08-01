@@ -7,7 +7,7 @@ const app = express()
 
 const connection = sql2.createConnection({
     //host: 'localhost', user:'root', password: '', database:'c237_electronicstoreapp', port: 3316
-    host: 'alwaysdata.com',
+    host: 'mysql-shiftlock.alwaysdata.net',
     user:'shiftlock', 
     password: 'mquH_bTYzBy2CUY', 
     database: 'shiftlock_website_proj'
@@ -33,9 +33,6 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({extended: false}))
 
-
-
-const PORT = 3000
 
 /*Routes for Web application */
 app.get('/', (req, res)=> {
