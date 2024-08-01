@@ -34,6 +34,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}))
 
 
+
+const PORT = 3000
+
 /*Routes for Web application */
 app.get('/', (req, res)=> {
     res.render('home')
