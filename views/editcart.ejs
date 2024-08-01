@@ -1,0 +1,33 @@
+<body>
+    <%- include ('partials/navbar') -%>
+<div class="container">
+    <br>
+    <div class="text-center"><h2>Update Item</h2></div>
+    <br>
+    <div class="text-center">
+      <% if (cartItem) { %> 
+        <form action="/editCartItem/<%= cartItem.itemID %>" method="POST">
+            <label for="name">Product Name:</label><br>
+            <input type="text" id="name" name="productName" value = <%= cartItem.productName %> readonly><br><br>
+
+            <label for="quantity">Quantity:</label><br>
+            <input type="number" id="quantity" name="quantity" min="0" step="1" value = <%= cartItem.quantity %> ><br><br>
+
+            <label for="price">Price:</label><br>
+            <input type="number" id="price" name="productPrice" min="0" step="0.01" value = <%= cartItem.productPrice %> readonly><br><br>
+
+            <label for="image">Item Image:</label><br>
+            <input type = "text" name = "image" value = <%= cartItem.image %> readonly><br>
+            <img src = "/images/<%= cartItem.image %>" width="20%"><br><br>
+
+
+            <button type="submit">Update Product</button>
+        </form>
+      <% } else { %>
+          <p>No product found.</p>
+      <% } %>
+      <a href ="/index">Back</a>
+    </div>
+</div>
+</body>
+</html>

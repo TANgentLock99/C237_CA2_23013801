@@ -1,0 +1,36 @@
+<body>
+    <%- include ('partials/navbar') -%>
+    <h1>Products in Cart</h1>
+    <div class="container">
+        <br>
+        <div class="text-center"><h2>Products in cart</h2></div>
+        <br>
+      
+        <table class="table table-hover small text-center">
+          <thead>
+              <tr>
+                <th width="100">Product Name</th>
+                <th width="100">Product Image</th>
+                <th width="50">Quantity</th>
+                <th width="50">Price</th>
+                <th width="50">Edit Cart Item</th>
+                <th width="50">Delete Cart Item</th>
+              </tr>
+          </thead>
+          <tbody>
+            <% for(let i=0; i < cartItems.length; i++) { %>
+              <tr>
+                <td><%= cartItems[i].productName %></td>
+                <td><img src = "/images/<%= cartItems[i].image %>" width = "20%"></td>
+                <td><%= cartItems[i].quantity %></td>
+                <td>$<%= cartItems[i].productPrice.toFixed(2) %></td>
+                <td><a href = "/editCartItem/<%= cartItems[i].itemID%>">Edit Item</a></td>
+                <td><a href = "/deletecartItem/<%= cartItems[i].itemID%>" onclick="return confirm('Are you sure you wish to remove this item from the cart?')">
+                    Delete item</a>
+
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+</body>

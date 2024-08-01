@@ -1,0 +1,31 @@
+<body>
+    <%- include('partials/homebar') -%>
+    <div class="container">
+    <br>
+    <div class="text-center"><h2>Register User</h2></div>
+    <br>
+    <div class="text-center">
+        <form action="/register" method="POST">
+            <label for="name">User Name:</label><br>
+            <input type="text" id="name" name="userName" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="name" name="email" required><br><br>
+
+            <label for="Contact Number">Contact number:</label><br>
+            <input type="number" id="contact" name="contactNo" min="0" step="1"required><br><br>
+
+            <label for="creditcard">Card Number:</label><br>
+            <input type="number" id="creditcard" name="creditCardNo" min="0" step="0.01" required><br><br>
+
+            <label for="image">Profile Imagery:</label><br>
+            <input type="file" id="image" name="image" accept = "image/*" required><br><br>
+
+            <label for="Address">Address:</label><br>
+            <input type="text" id="name" name="Address" required><br><br>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+</body>
