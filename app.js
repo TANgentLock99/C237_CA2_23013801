@@ -7,7 +7,7 @@ const app = express()
 
 const connection = sql2.createConnection({
     //host: 'localhost', user:'root', password: '', database:'c237_electronicstoreapp', port: 3316
-    host: 'admin.alwaysdata.com',
+    host: 'alwaysdata.com',
     user:'shiftlock', 
     password: 'mquH_bTYzBy2CUY', 
     database: 'shiftlock_website_proj'
